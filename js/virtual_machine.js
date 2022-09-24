@@ -1,6 +1,6 @@
-let PUSH  = 0;
-let ADD   = 1;
-let MINUS = 2;
+const PUSH  = 'PUSH';
+const ADD   = 'ADD';
+const MINUS = 'MINUS';
 
 let virtualMachine = function(program) {
     let programCounter = 0;
@@ -48,7 +48,9 @@ let program = [
     PUSH, 4,
     ADD,
     PUSH, 5,
-    MINUS
+    MINUS,
+    PUSH, 8,
+    ADD
 ];
 
 virtualMachine(program);
