@@ -32,5 +32,5 @@ func (c *Compiler) Bytecode() *Bytecode {
 
 type Bytecode struct {
 	Instructions code.Instructions
-	Constants    []ast.Object
+	Constants    []object.Object
 }

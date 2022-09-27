@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-type Instrcutions []byte
+type Instructions []byte
 
 type Opecode byte
 
