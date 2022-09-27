@@ -8,10 +8,10 @@ import (
 
 type Instructions []byte
 
-type Opecode byte
+type Opcode byte
 
 const (
-	OpConstant Opecode = iota
+	OpConstant Opcode = iota
 )
 
 type Definition struct {
@@ -19,20 +19,20 @@ type Definition struct {
 	OperandWidths []int
 }
 
-var definitions = map[Opecode]*Definition{
+var definitions = map[Opcode]*Definition{
 	OpConstant: {"OpConstant", []int{2}},
 }
 
 func Lookup(op byte) (*Definition, error) {
-	def, ok := definitions[Opecode(op)]
+	def, ok := definitions[Opcode(op)]
 	if !ok {
-		return nil, fmt.Errorf("opecode %d undefined", op)
+		return nil, fmt.Errorf("opcode %d undefined", op)
 	}
 
 	return def, nil
 }
 
-func Make(op Opecode, operands ...int) []byte {
+func Make(op Opcode, operands ...int) []byte {
 	def, ok := definitions[op]
 	if !ok {
 		return []byte{}
