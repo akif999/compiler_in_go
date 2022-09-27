@@ -1,8 +1,7 @@
 package compiler
 
 import (
-	"go/ast"
-
+	"github.com/akif999/compiler_in_go/go/Monkey/ast"
 	"github.com/akif999/compiler_in_go/go/Monkey/code"
 	"github.com/akif999/compiler_in_go/go/Monkey/object"
 )
