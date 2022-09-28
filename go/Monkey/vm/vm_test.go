@@ -34,7 +34,7 @@ func runVmTests(t *testing.T, tests []vmTestCase) {
 		comp := compiler.New()
 		err := comp.Compile(program)
 		if err != nil {
-			t.Fatal("compiler error: %s", err)
+			t.Fatalf("compiler error: %s", err)
 		}
 
 		vm := New(comp.Bytecode())
