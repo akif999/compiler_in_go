@@ -142,7 +142,7 @@ func TestResolveNestedLocal(t *testing.T) {
 
 	for _, tt := range tests {
 		for _, sym := range tt.expectedSymbols {
-			result, ok := local.Resolve(sym.Name)
+			result, ok := tt.table.Resolve(sym.Name)
 			if !ok {
 				t.Errorf("name %s not resolvable", sym.Name)
 				continue
